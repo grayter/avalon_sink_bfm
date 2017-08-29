@@ -67,7 +67,7 @@ begin
   begin
     if rising_edge(clk) then
       gen_chance := RV.RandInt(0, 100);
-      if gen_chance > pause_pct then
+      if gen_chance >= pause_pct then
         ready <= '1';
       else
         ready <= '0';
